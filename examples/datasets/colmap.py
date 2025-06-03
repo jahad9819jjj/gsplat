@@ -408,6 +408,8 @@ class Dataset:
         if mask is not None:
             data["mask"] = torch.from_numpy(mask).bool()
 
+        import ipdb; ipdb.set_trace()
+
         if self.load_depths:
             # projected points to image plane to get depths
             worldtocams = np.linalg.inv(camtoworlds)
